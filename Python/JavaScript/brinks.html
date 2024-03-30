@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de JavaScript</title>
+</head>
+<body>
+    <label for="Nacionalidade">Selecione sua Nacionalidade:</label>
+    <select id="Nacionalidade">
+        <option value="Brasil">Brasileiro</option>
+        <option value="Estrangeiro">Estrangeiro</option>
+    </select>
+    <button onclick="mostrar()">Mostrar Nacionalidade</button>
+    <div id="res"></div>
+
+    <script>
+        function mostrar() {
+            var nacionalidade = document.getElementById('Nacionalidade').value;
+            var res = document.querySelector('div#res');
+            if (nacionalidade !== 'Brasil') {
+                res.innerHTML = `<p>Você é Estrangeiro</p>`;
+            } else {
+                res.innerHTML = `<p>Você é Brasileiro</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Imigração</title>
+</head>
+<h1>
+    Teste de Nacionalidade
+</h1>
+<body>
+    Pais de origem: <input type="text" name="txt" id="txt">
+    <input type="button" value="verificar" onclick="mostrar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function mostrar() {
+            var nacionalidade = document.getElementById('Nacionalidade').value;
+            var res = document.querySelector('div#res');
+            if (nacionalidade !== 'Brasil') {
+                res.innerHTML = `<p>Você é Estrangeiro</p>`;
+            } else {
+                res.innerHTML = `<p>Você é Brasileiro</p>`;
+            }
+        }
+    </script>
+
+</body>
+</html>
